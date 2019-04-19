@@ -1,0 +1,34 @@
+<nav class="main-navbar py-3 " style="background-color:#060605">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col">
+        <h2 class="m-0 brand-name text-white d-none d-md-block">RENTAL MANAGEMENT SYSTEM</h2>
+        <h2 class="m-0  brand-name text-white d-md-none">R.M.S.</h2>
+      </div>
+      <div class="col-auto">
+        <ul class="list-unstyled m-0 headerdropdown">
+          <li class="nav-item dropdown">
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" data-toggle="dropdown" role="button">
+                Select Location
+              </a>
+              <ul class="dropdown-menu  dropdown-menu-right">
+                <!-- <li><a class="dropdown-item" href="#">Action</a></li> -->
+                <li class="dropleft" *ngFor="let item of incomingArray">
+                  <a class="dropdown-item dropdown-toggle">{{item.name}}</a>
+                  <ul class="dropdown-menu">
+                    <div *ngIf="item && item.branches.length > 0">
+                      <li *ngFor="let subItem of item.branches">
+                        <a class="dropdown-item" (click)="selectedItem(item, subItem)">{{subItem.name}}</a>
+                      </li>
+                    </div>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
