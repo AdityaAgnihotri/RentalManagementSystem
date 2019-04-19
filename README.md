@@ -25,3 +25,22 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Description
+
+The Code is proper component based as I have devided the screen into component as it comes.
+
+We could also implement lazy loading in that but I did not find the proper place to implement as the size of application is not that big and neither the compnents differ in their functionality.
+
+Routing is implemented in the routing module and it is been imported into app module .
+
+Header component imports the data(The json is hosted on the AWS live server.) and it is been binded to the dropdown.
+
+After selecting the the branches(in the branched dropdown) we go to the category page. The category is get with the help of the queryparams.
+
+You can then navigate to the subcategory page by clicking on the arrow(->).
+
+
+
+
+
